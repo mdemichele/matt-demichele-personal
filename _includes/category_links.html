@@ -1,0 +1,8 @@
+{% for category in include.categories %}
+	{% assign no_comma = forloop.last %}
+	{% for blog in site.blog %}
+		{% if blog.type == "category" and blog.title == category %}
+			<a href="{{ blog.url | relative_url }}">{{ blog.title | escape }}</a>{% unless no_comma %},{% endunless %}
+		{% endif %}
+	{% endfor %}
+{% endfor %}

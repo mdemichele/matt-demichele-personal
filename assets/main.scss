@@ -1,0 +1,13 @@
+---
+---
+
+@mixin media-query($device) {
+	@media screen and (max-width: $device) {
+		@content;
+	}
+}
+
+
+
+// Import partials from the primary theme.
+@import "primary";
